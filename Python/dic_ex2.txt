@@ -1,0 +1,20 @@
+frase = "Um teste, dois testes, mais testes, acabou?, SIM !!!"
+
+def contaPalavras(frase):
+  novafrase = frase.lower()
+  contador={}
+  lista=[]
+  newlist = novafrase.split()
+  for l in range(len(newlist)):
+     lista.append(newlist[l].rstrip(",?!"))
+  
+  for palavra in lista:
+    if palavra == "":
+      lista.remove(palavra)
+    else:
+      if palavra not in contador:
+          contador[palavra] = 1
+      else:
+           contador[palavra] = contador[palavra] + 1
+  return contador
+print(contaPalavras(frase))

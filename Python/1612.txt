@@ -1,0 +1,126 @@
+ex1
+n1 = float(input("Digite a 1ª nota: "))
+n2 = float(input("Digite a 2ª nota: "))
+
+media = (n1 + n2) / 2
+
+print()
+if media < 5:
+    print("Reprovado")
+else:
+    if 10 > media >= 5:
+        print("Aprovado")
+    else:
+        print("Aprovado com Distinção")
+
+ex2
+n1 = float(input("Valor de n1: ")) 
+n2 = float(input("Valor de n2: ")) 
+op = input("Operação que quer realizar: ")
+print()
+
+if op == "soma":
+    print(n1 + n2)
+elif op == "subtração":
+    print(n1 - n2)
+elif op == "multiplicação":
+    print(n1 * n2)
+elif op == "divisão":
+    print(n1 / n2)
+else:
+    print("Operação não é válida") 
+
+ex3
+x=int(input("Valor de x: "))
+y=int(input("Valor de y: "))
+print()
+if x > 0 and y > 0:
+    print("Quadrante 1")
+elif x < 0 and y > 0:
+    print("Quadrante 2")
+elif x < 0 and y < 0:
+    print("Quadrante 3")
+elif x > 0 and y < 0:
+    print("Quadrante 4")
+elif x == 0 and y == 0:
+    print("Ponto de origem")
+elif x == 0:
+    print("Sobre o eixo y")
+else:
+    print("Sobre o eixo x")
+
+ex4
+salario = float(input("Digite seu salário: \n"))
+print()
+if salario <= 400.00:
+    print((salario * 0.15) + salario)
+    print(salario * 0.15) 
+    print("15%")
+elif salario >= 400.01 and salario <= 800.00:
+    print((salario * 0.12) + salario)
+    print(salario * 0.12)
+    print("12%") 
+elif salario >= 800.01 and salario <= 1200.00:    
+    print((salario * 0.10) + salario)
+    print(salario * 0.10) 
+    print("10%") 
+elif salario >= 1200.01 and salario <= 2000.00:    
+    print((salario * 0.07) + salario)
+    print(salario * 0.07) 
+    print("7%") 
+else:
+    print((salario * 0.04) + salario)
+    print(salario * 0.04)
+    print("4%")
+
+ex5
+q1=input("Telefonou para a vítima? ")
+q2=input("Esteve no local do crime? ")
+q3=input("Mora perto da vítima? ")
+q4=input("Devia para a vítima? ")
+q5=input("Já trabalhou com a vítima? ")
+
+r1=0
+r2=0
+r3=0
+r4=0
+r5=0
+
+if q1=="sim":
+    r1=1
+if q2=="sim":
+    r2=1
+if q3=="sim":
+    r3=1
+if q4=="sim":
+    r4=1
+if q5=="sim":
+    r5=1
+
+total = r1+r2+r3+r4+r5
+
+if total==2:
+    print("suspeita")
+elif total==3 or total==4:
+    print("cúmplice")
+elif total==5:
+    print("Assassino")
+else:
+    print("Inocente")
+
+ex6
+combustivel=input("Qual o tipo de combustivel? ")
+litros = float(input("Quantos litros? "))
+if combustivel == "gasolina" and litros <= 20:
+   preco = 5.60 * litros - (litros * 0.04)
+elif combustivel == "gasolina" and litros > 20:   
+    preco = 5.60 * litros - (litros * 0.06)
+elif combustivel == "álcool" and litros <= 20:
+    preco = 4.19 * litros - (litros * 0.03)
+elif combustivel == "álcool" and litros > 20:
+     preco = 4.19 * litros - (litros*0.05)
+else:
+    print("ERRO")
+print()
+print("Custara R${0:.2f}".format(preco))
+

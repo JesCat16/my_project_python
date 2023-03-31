@@ -1,0 +1,6 @@
+l = ["olá, tudo bem?", "bom dia,como vai?"]
+
+p = bom
+
+for i in l:
+	if p in i:
